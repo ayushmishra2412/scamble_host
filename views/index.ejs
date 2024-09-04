@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="main w-full h-screen bg-zinc-900 p-10 text-white flex flex-col items-center justify-center ">
+        <h2 class="text-4xl text-center text-red-200 mb-5">Scamble</h2>
+        <div id="grid" class="grid grid-cols-5 gap-2">
+            <% for(let i = 0; i < 30; i++) { %>
+                <div data-index="<%= i %>" class="tile w-14 h-14 bg-white cursor-pointer flex items-center justify-center rounded-md transition-colors duration-300"></div>
+            <% } %>
+        </div>
+    </div>
+    <script>
+        const tiles = document.querySelectorAll('.tile');
+        tiles.forEach(tile => {
+            tile.addEventListener('click', () => {
+                const index = tile.dataset.index;
+                fetch('/get-color')
+                    .then(response => response.json())
+                    .then(data => {
+                        const color = data.color;
+                        tile.style.backgroundColor = color;
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
