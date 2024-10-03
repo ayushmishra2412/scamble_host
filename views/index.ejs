@@ -7,11 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="main w-full h-screen bg-zinc-900 p-10 text-white flex flex-col items-center justify-center ">
-        <h2 class="text-4xl text-center text-red-200 mb-5">Scamble</h2>
+    <div class="main w-full h-screen bg-[#85FFBD] p-10 text-black flex flex-col items-center justify-center" style="background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);">
+        <h2 class="text-4xl text-center text-red-900 font-bold mb-7">Scamble</h2>
         <div id="grid" class="grid grid-cols-5 gap-2">
             <% for(let i = 0; i < 30; i++) { %>
-                <div data-index="<%= i %>" class="tile w-14 h-14 bg-white cursor-pointer flex items-center justify-center rounded-md transition-colors duration-300"></div>
+                <div data-index="<%= i %>" class="tile w-14 h-14 bg-black cursor-pointer flex items-center justify-center rounded-md transition-colors duration-300"></div>
             <% } %>
         </div>
     </div>
