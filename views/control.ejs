@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
-</head>
-<body>
-    <div class="main w-full h-screen bg-zinc-900 p-10 text-white">
-        <h2 class="text-4xl text-center text-red-200">Control Game Outcome</h2>
-        <div class="flex flex-col gap-3 items-center mt-6">
-            <a href="/set_control/0" class="bg-red-500 w-[100px] text-center rounded-md px-3 py-2 text-sm mb-1 inline-block">Win</a>
-            <a href="/set_control/1" class="bg-red-500 w-[100px] text-center rounded-md px-3 py-2 text-sm mb-1 inline-block">Lose</a>
-            <a href="/set_control/2" class="bg-red-500 w-[100px] text-center rounded-md px-3 py-2 text-sm mb-1 inline-block">Random</a>
-        </div>
+  </head>
+  <body>
+    <div
+      class="main w-full h-screen bg-[#85FFBD] p-10 text-black"
+      style="background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%)"
+    >
+      <h2 class="text-4xl text-center font-bold text-red-900">
+        Control Game Outcome
+      </h2>
+      <div class="flex flex-col gap-3 items-center mt-6">
+        <a
+          href="/set_control/0"
+          class="bg-blue-500 w-[100px] text-center rounded-md px-3 py-2 text-sm mb-1 inline-block text-white"
+          >Win</a
+        >
+        <a
+          href="/set_control/1"
+          class="bg-blue-500 w-[100px] text-center rounded-md px-3 py-2 text-sm mb-1 inline-block text-white"
+          >Lose</a
+        >
+        <a
+          href="/set_control/2"
+          class="bg-blue-500 w-[100px] text-center rounded-md px-3 py-2 text-sm mb-1 inline-block text-white"
+          >Random</a
+        >
+      </div>
     </div>
-</body>
+  </body>
 </html>
